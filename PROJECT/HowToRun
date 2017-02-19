@@ -6,4 +6,6 @@
 		roslaunch gazebo_world test.launch
 
 	
-		from this moment your can run implementedplanners from planner package or run ROS planner from pioneer_3dx_2dnav pckg (If you want to test ROS planners, remmember to run rviz.lanuch file from p3dx_description package before).
+		from this moment you can run implemented planners from planner package or
+		run ROS planner from pioneer_3dx_2dnav pckg (If you want to test ROS planners, 
+		remmember to run rviz.lanuch file from p3dx_description package before).
