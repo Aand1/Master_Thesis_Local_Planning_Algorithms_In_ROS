@@ -1,0 +1,4 @@
+MODULES_MANAGER_V2
+BUG2_Local_planner|/home/wasiel13/wasiel_13/SYNERGIA_PROJECTS/master_thesis/ROS_MotionPlanning_ObstacleDetection/src/planner/src/script/BUG2_Local_planner.py
+BUG_Local_planner|/home/wasiel13/wasiel_13/SYNERGIA_PROJECTS/master_thesis/ROS_MotionPlanning_ObstacleDetection/src/planner/src/script/BUG_Local_planner.py
+POTENCIAL_MAX_Local_planner|/home/wasiel13/wasiel_13/SYNERGIA_PROJECTS/master_thesis/ROS_MotionPlanning_ObstacleDetection/src/planner/src/script/POTENCIAL_MAX_Local_planner.py

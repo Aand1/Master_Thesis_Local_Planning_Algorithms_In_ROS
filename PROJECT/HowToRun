@@ -1,0 +1,9 @@
+1) create your own ROS workspace
+2) install navigation and gazebo2 full pkgs
+2) copy packages to your workspace, remember edit CmakeList int the 'src' folder!!!
+
+	2.1) to launch test environment with gazebo: 
+		roslaunch gazebo_world test.launch
+
+	
+		from this moment your can run implementedplanners from planner package or run ROS planner from pioneer_3dx_2dnav pckg (If you want to test ROS planners, remmember to run rviz.lanuch file from p3dx_description package before).

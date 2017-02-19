@@ -1,0 +1,12 @@
+Package description:
+
+
+gazebo_worlds:
+This package contais the filr with .world extension which is describing the working area for the robots.
+In the launch folder we can find the launch files which allow us to run the world without robot with one robot or with ouple robots.
+
+pioneer_3dx/pioneer_description
+package was cloned from //github.com/JenJenChung/ package contains all neccesseary files which allow user run pioneer 3dx model in gazebo simulator
+
+pioneer_3dx/pioneer_control
+package was cloned from //github.com/JenJenChung/ package contains all neccesseary files which allow user run pioneer 3dx model in gazebo simulator

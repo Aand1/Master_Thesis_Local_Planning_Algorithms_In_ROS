@@ -1,0 +1,16 @@
+<launch>    
+<param name="/use_sim_time" value="true"/>
+
+ 
+
+  <group ns="pioneer1">
+    <param name="tf_prefix" value="pioneer1" />
+    <param name="amcl/initial_pose_x" value="-4" />
+    <param name="amcl/initial_pose_y" value="-55" />
+    <param name="amcl/initial_pose_z" value="0" />
+    <include file="$(find pioneer_3dx_2dnav)/launch/move_base_TebLP.launch" />
+  </group>
+
+ 
+
+</launch>

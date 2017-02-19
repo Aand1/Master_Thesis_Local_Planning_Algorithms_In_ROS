@@ -1,0 +1,22 @@
+<launch>
+  <arg name="robot_name"/>
+  <arg name="init_pose"/>
+  <arg name="model" default="$(find p3dx_description)/urdf/pioneer3dx.xml"/>
+  <arg name="gui" default="False" />
+
+  
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+	args="$(arg init_pose) -urdf -param /robot_description -model $(arg robot_name)"/>
+ 
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    <param name="robot_description" textfile="$(arg model)" />
+    <param name="use_gui" value="$(arg gui)"/>
+  </node>
+
+
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+
+</launch>

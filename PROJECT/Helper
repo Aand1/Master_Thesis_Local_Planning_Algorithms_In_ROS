@@ -1,0 +1,29 @@
+Package description:
+
+Folder Gazebo_Models contains: The saved model of the created world.
+
+Folder ROS_MotionPlanning_ObstacleDetection contains: ROS Indigo workspace.
+
+Folder ROS_MotionPlanning_ObstacleDetection/src contains: the created ROS packages described below.
+
+
+gazebo_worlds pckg:
+This package contais the file with .world extension which is describing the working area for the robots.
+In the launch folder we can find the launch files which allow us to run the world without robot with one robot or with ouple robots.
+
+pioneer_3dx/pioneer_description:
+package was cloned from //github.com/JenJenChung/ package contains all neccesseary files which allow user run pioneer 3dx model in gazebo simulator
+
+pioneer_3dx/pioneer_control:
+package was cloned from //github.com/JenJenChung/ package contains all neccesseary files which allow user run pioneer 3dx model in gazebo simulator
+
+navigation-indigo-devel:
+The ROS navigation pckg
+
+pioneer_3dx_2dnav:
+Package contains configurations for TEB local planner and ROS base local planner
+
+planner:
+contains implemented planners (BUG0 and Potential Field).
+
+For more information please read wiki documents.

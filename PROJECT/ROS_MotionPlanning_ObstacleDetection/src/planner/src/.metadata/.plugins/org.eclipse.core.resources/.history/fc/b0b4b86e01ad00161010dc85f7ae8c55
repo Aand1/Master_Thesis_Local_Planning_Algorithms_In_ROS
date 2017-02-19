@@ -1,0 +1,37 @@
+'''
+Created on Nov 17, 2016
+
+@author: Mateusz Wasielewski|M_Wasiel13|wasiel13
+'''
+#transformation function between quaterion and qartesian form
+
+import rospy
+from std_msgs.msg import String
+from sensor_msgs.msg import LaserScan
+from copy import copy, deepcopy
+from nav_msgs.msg import Odometry
+import tf
+import math
+import sys
+from geometry_msgs.msg import Twist
+from gnomevfs._gnomevfs import Drive
+from __builtin__ import False
+
+start = True
+
+def tf_QuatQartesian(dataX, dataY, dataZ, dataYaw):
+    quaternion = (dataX, dataY, dataZ, dataYaw)
+    euler = tf.transformations.euler_from_quaternion(quaternion)
+    yaw = euler[2]
+    return yaw
+
+def driveStop():
+    pub = rospy.Publisher('pioneer1/cmd_vel', Twist)
+    twist = Twist()
+    for i in range(0, 60):
+        if i < 30:
+            twist.linear.x = 0.1
+        else: 
+            twist.linear.x = 0.0
+    print "STOP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"        
+    pub.publish(twist)

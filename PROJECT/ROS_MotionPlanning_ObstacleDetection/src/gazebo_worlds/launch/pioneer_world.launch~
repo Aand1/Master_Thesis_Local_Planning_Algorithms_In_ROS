@@ -1,0 +1,75 @@
+<launch>
+
+	<!-- these are the arguments you can pass this launch file, for example 
+		paused:=true -->
+	<arg name="paused" default="false" />
+	<arg name="use_sim_time" default="true" />
+	<arg name="gui" default="true" />
+	<arg name="headless" default="false" />
+	<arg name="debug" default="false" />
+
+	<!-- We resume the logic in empty_world.launch, changing only the name of 
+		the world to be launched -->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find gazebo_worlds)/worlds/Factory_World.world" />
+		<arg name="debug" value="$(arg debug)" />
+		<arg name="gui" value="$(arg gui)" />
+		<arg name="paused" value="$(arg paused)" />
+		<arg name="use_sim_time" value="$(arg use_sim_time)" />
+		<arg name="headless" value="$(arg headless)" />
+	</include>
+
+	<!-- Load the URDF into the ROS Parameter Server -->
+	<param name="robot_description"
+		command="$(find xacro)/xacro.py '$(find p3dx_description)/urdf/pioneer3dx.xacro'" />
+
+
+
+          <!-- BEGIN PIONEER 1-->
+  <group ns="pioneer1">
+    <param name="tf_prefix" value="pioneer1" />
+    <include file="$(find p3dx_description)/launch/one_pioneer.launch" >
+      <arg name="init_pose" value="-x -8 -y -55 -z 0" />
+      <arg name="robot_name"  value="pioneer1" />
+    </include>
+  </group>
+
+          <!-- BEGIN PIONEER 2-->
+  <group ns="pioneer2">
+    <param name="tf_prefix" value="pioneer2" />
+    <include file="$(find p3dx_description)/launch/one_pioneer.launch" >
+      <arg name="init_pose" value="-x -6 -y -55 -z 0" />
+      <arg name="robot_name"  value="pioneer2" />
+    </include>
+  </group>	
+       
+           <!-- BEGIN PIONEER 3-->
+  <group ns="pioneer3">
+    <param name="tf_prefix" value="pioneer3" />
+    <include file="$(find p3dx_description)/launch/one_pioneer.launch" >
+      <arg name="init_pose" value="-x -4 -y -55 -z 0" />
+      <arg name="robot_name"  value="pioneer3" />
+    </include>
+  </group>	
+
+          <!-- BEGIN PIONEER 4-->
+  <group ns="pioneer4">
+    <param name="tf_prefix" value="pioneer4" />
+    <include file="$(find p3dx_description)/launch/one_pioneer.launch" >
+      <arg name="init_pose" value="-x -2 -y -55 -z 0" />
+      <arg name="robot_name"  value="pioneer4" />
+    </include>
+  </group>	
+
+          <!-- BEGIN PIONEER 5-->
+  <group ns="pioneer5">
+    <param name="tf_prefix" value="pioneer5" />
+    <include file="$(find p3dx_description)/launch/one_pioneer.launch" >
+      <arg name="init_pose" value="-x -0 -y -55 -z 0" />
+      <arg name="robot_name"  value="pioneer5" />
+    </include>
+  </group>	         
+	<!-- ros_control p3rd launch file -->
+	<!-- <include file="$(find p3dx_control)/launch/control.launch" /> -->
+
+</launch>

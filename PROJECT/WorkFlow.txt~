@@ -1,0 +1,15 @@
+
+Plan of the work:
+
+1. Test/simulation environment
+	1.1 ROS Indigo installation - DONE 
+	1.2 Gazebo7 installation, configuration with ROS - DONE 
+	1.3 Write the installation documentation - TO DO IN FUTURE
+2. Prepare the map and visualisation of the testing area in Gazebo2 - DONE
+3. Run at least two robots working in prepared area - DONE
+4. Create the map of the working area by using SLAM - IN PROGRESS
+5. Check available local planning algorithms in ROS (base_local_planner, dwa_local_planner,...)
+6. Planner implementation (Python script or C/Cpp)
+	6.1 Potencial algorithm.
+	6.2 Square divide map algorithm, with specified restictions about moving
+	6.3 Evaulation of the used algorithms

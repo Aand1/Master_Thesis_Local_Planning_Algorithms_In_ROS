@@ -1,0 +1,46 @@
+<launch>    
+<param name="/use_sim_time" value="true"/>
+
+ 
+
+  <group ns="pioneer1">
+    <param name="tf_prefix" value="pioneer1" />
+    <param name="amcl/initial_pose_x" value="-8" />
+    <param name="amcl/initial_pose_y" value="-55" />
+    <param name="amcl/initial_pose_z" value="0" />
+    <include file="$(find pioneer_3dx_2dnav)/launch/move_base.launch" />
+  </group>
+
+  <group ns="pioneer2">
+    <param name="tf_prefix" value="pioneer2" />
+    <param name="amcl/initial_pose_x" value="-6" />
+    <param name="amcl/initial_pose_y" value="-55" />
+    <param name="amcl/initial_pose_z" value="0" />
+    <include file="$(find pioneer_3dx_2dnav)/launch/move_base.launch" />
+  </group>
+  
+  <group ns="pioneer3">
+    <param name="tf_prefix" value="pioneer3" />
+    <param name="amcl/initial_pose_x" value="-4" />
+    <param name="amcl/initial_pose_y" value="-55" />
+    <param name="amcl/initial_pose_z" value="0" />
+    <include file="$(find pioneer_3dx_2dnav)/launch/move_base.launch" />
+  </group>
+
+  <group ns="pioneer4">
+    <param name="tf_prefix" value="pioneer4" />
+    <param name="amcl/initial_pose_x" value="-2" />
+    <param name="amcl/initial_pose_y" value="-55" />
+    <param name="amcl/initial_pose_z" value="0" />
+    <include file="$(find pioneer_3dx_2dnav)/launch/move_base_test.launch" />
+  </group>
+
+  <group ns="pioneer5">
+    <param name="tf_prefix" value="pioneer5" />
+    <param name="amcl/initial_pose_x" value="0" />
+    <param name="amcl/initial_pose_y" value="-55" />
+    <param name="amcl/initial_pose_z" value="0" />
+    <include file="$(find pioneer_3dx_2dnav)/launch/move_base.launch" />
+  </group>
+
+</launch>

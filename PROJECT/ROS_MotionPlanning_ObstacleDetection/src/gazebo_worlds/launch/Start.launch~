@@ -1,0 +1,9 @@
+<launch>
+
+  
+    <include file="$(find gazebo_worlds)/launch/pioneer_world.launch">
+    <include file="$(find pioneer_description)/launch/pioneer_rviz.launch">
+    <include file="$(find gazebo_worlds)/launch/map_server.launch"> 
+    
+
+</launch>

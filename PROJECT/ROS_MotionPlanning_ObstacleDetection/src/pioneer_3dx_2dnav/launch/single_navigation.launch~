@@ -1,0 +1,10 @@
+<launch>
+        
+    <param name="/initial_pose_x" value="0" />
+    <param name="/initial_pose_y" value="0" />
+    <param name="/initial_pose_a" value="0)" />
+    <include file="$(find pioneer_3dx_2dnav)/launch/move_base.launch">
+      
+   
+  
+</launch>

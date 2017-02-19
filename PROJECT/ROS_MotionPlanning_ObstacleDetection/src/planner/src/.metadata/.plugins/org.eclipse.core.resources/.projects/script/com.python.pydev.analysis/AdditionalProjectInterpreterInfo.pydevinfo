@@ -1,0 +1,47 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/wasiel13/wasiel_13/SYNERGIA_PROJECTS/master_thesis/ROS_MotionPlanning_ObstacleDetection/src/planner/src/.metadata/.plugins/org.eclipse.core.resources/.projects/script/com.python.pydev.analysis/v2_indexcache
+BUG_Local_planner|1479659617000000000|/home/wasiel13/wasiel_13/SYNERGIA_PROJECTS/master_thesis/ROS_MotionPlanning_ObstacleDetection/src/planner/src/script/BUG_Local_planner.py
+POTENCIAL_MAX_Local_planner|1479647986000000000|/home/wasiel13/wasiel_13/SYNERGIA_PROJECTS/master_thesis/ROS_MotionPlanning_ObstacleDetection/src/planner/src/script/POTENCIAL_MAX_Local_planner.py
+BUG2_Local_planner|1479648760000000000|/home/wasiel13/wasiel_13/SYNERGIA_PROJECTS/master_thesis/ROS_MotionPlanning_ObstacleDetection/src/planner/src/script/BUG2_Local_planner.py
+-- END DISKCACHE
+-- START DICTIONARY
+3
+3=BUG_Local_planner
+2=POTENCIAL_MAX_Local_planner
+1=BUG2_Local_planner
+-- END DICTIONARY
+-- START TREE 1
+28
+ang|3|angleDiv!11@angleDiv!19@angleDiv!27@
+avo|1|AVOID_FLAG!11@
+com|13|compute_currentYAW!19@computeYaw!26@computeYaw!18@computeYaw!10@compute_currentYAW!27@compute_currentY!27@compute_currentX!19@compute_currentX!27@compute_currentYAW!11@compute_currentY!19@compute_currentY!11@computeGoalYaw!27@compute_currentX!11@
+dat|3|data_range!27@data_range!11@data_range!19@
+dis|2|distanctanceIntoMax!19@distanctanceIntoMax!27@
+dri|7|driveToPoint!18@driveStop!10@driveToPoint!10@driveToPoint!26@driveStop!18@driveStop!26@drive!26@
+fin|0|
+get|3|getGoalYaw!18@getGoalYaw!10@getGoalYaw!26@
+glo|3|global_planner!18@global_planner!10@global_planner!26@
+goa|11|goal_angle_right!11@goal_point_x!11@goal_point_x!27@goal_point_x!19@goal_point!27@goal_point!19@goal_point_y!11@goal_point_y!19@goal_yaw!27@goal_angle_left!11@goal_point_y!27@
+las|3|laser_data!18@laser_data!10@laser_data!26@
+lis|3|listener!18@listener!10@listener!26@
+loc|3|local_planner!26@local_planner!10@local_planner!18@
+lp_|3|lp_offset!27@lp_offset!11@lp_offset!19@
+mak|1|makeMask!18@
+mas|2|mask!27@mask!19@
+obs|3|obstacle_range!19@obstacle_range!11@obstacle_range!27@
+odo|3|odometry_data!18@odometry_data!10@odometry_data!26@
+pla|3|PLANNER_FLAG!19@PLANNER_FLAG!11@PLANNER_FLAG!27@
+pre|3|prefix!27@prefix!11@prefix!19@
+rea|1|REACH_GOAL!11@
+reg|1|regulator!26@
+sta|3|start!27@start!19@start!11@
+ste|1|STEPS!27@
+tes|1|test!18@
+tf_|3|tf_QuatQartesian!26@tf_QuatQartesian!18@tf_QuatQartesian!10@
+twi|7|twistStop!10@twistYaw!10@twistYaw!26@twistStop!26@twistYaw!18@twist!26@twistStop!18@
+yaw|8|yaw_offset!27@YAW_FLAG!27@yawObtain!19@YAW_FLAG!11@YAW_FLAG!19@yaw_offset!19@yawObtain!27@yaw_offset!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

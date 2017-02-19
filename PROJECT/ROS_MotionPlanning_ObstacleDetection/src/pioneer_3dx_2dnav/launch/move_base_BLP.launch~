@@ -1,0 +1,16 @@
+<launch>    
+  <!--- Run AMCL -->
+  <!--include file="$(find pioneer_3dx_2dnav)/launch/pioneer_3dx_2dnav_amcl.launch" /-->
+
+  <!-- Define your move_base node -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
+    <rosparam file="$(find pioneer_3dx_2dnav)/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(find pioneer_3dx_2dnav)/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find pioneer_3dx_2dnav)/local_costmap_params.yaml"  command="load" />
+    <rosparam file="$(find pioneer_3dx_2dnav)/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find pioneer_3dx_2dnav)/base_local_planner_params.yaml" command="load" />
+
+    <remap from="map" to="/map" />
+  </node>
+</launch>

@@ -1,0 +1,12 @@
+'''
+Created on Nov 17, 2016
+
+@author: Mateusz Wasielewski|M_Wasiel13|wasiel13
+'''
+#transformation function between quaterion and qartesian form
+import tf
+def tf_QuatQartesian(dataX, dataY, dataZ, dataYaw):
+    quaternion = (dataX, dataY, dataZ, dataYaw)
+    euler = tf.transformations.euler_from_quaternion(quaternion)
+    yaw = euler[2]
+    return yaw
